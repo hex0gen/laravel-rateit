@@ -1,0 +1,54 @@
+{
+    "name": "hex0gen/laravel-rateit",
+    "description": "Simple star rating component for use it in Views and Models.",
+    "keywords": [
+        "hex0gen",
+        "laravel-rateit"
+    ],
+    "homepage": "https://github.com/hex0gen/laravel-rateit",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Alex Lapin",
+            "email": "alex.lapin@mail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^5.8"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^7.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hex0gen\\LaravelRateit\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hex0gen\\LaravelRateit\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hex0gen\\LaravelRateit\\LaravelRateitServiceProvider"
+            ],
+            "aliases": {
+                "LaravelRateit": "Hex0gen\\LaravelRateit\\LaravelRateitFacade"
+            }
+        }
+    }
+}
